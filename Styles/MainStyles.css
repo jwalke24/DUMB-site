@@ -1,0 +1,27 @@
+﻿/* Style rules for HTML elements. */
+
+/* Style rules for CSS ID selectors. */
+#content {
+    width: 978px;
+    margin: 0 auto;
+    background-color: tan;
+    border: 1px solid maroon;
+}
+
+#companyName {
+    margin-bottom: 0;
+}
+
+#companySlogan {
+    margin-top: 0;
+    font-style: italic;
+}
+
+/* Style rules for CSS Class selectors. */
+.headerfooter {
+    background-color: maroon;
+    overflow: auto;
+
+    color: white;
+    text-align: center;
+}
