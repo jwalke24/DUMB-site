@@ -191,4 +191,22 @@ public class Feedback
             this.description = value;
         }
     }
+
+    /// <summary>
+    /// Returns a string representation of the feedback.
+    /// </summary>
+    /// <precondition>this.softwareId != null && this.dateClosed != null && this.title != null</precondition>
+    /// <returns>A string representing the feedback.</returns>
+    /// <exception cref="System.ArgumentNullException">Thrown iff softwareId, dateClosed, or title are null</exception>
+    public string FormatFeedback()
+    {
+        if (this.softwareId == null || this.dateClosed == null || this.title == null)
+        {
+            throw new ArgumentNullException();
+        }
+
+        var feedback = "Feedback for software " + this.softwareId + " closed " + this.dateClosed + " (" + this.title +
+                       ")";
+        return feedback;
+    }
 }
