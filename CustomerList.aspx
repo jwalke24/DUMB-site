@@ -15,6 +15,10 @@
         </header>
         <form id="customerListForm" runat="server">
         
+            <asp:Label ID="lblSelectCustomer" runat="server" Text="Please select a customer:"></asp:Label>
+            <asp:DropDownList ID="ddlSelectCustomer" runat="server" AutoPostBack="True">
+            </asp:DropDownList>
+        
         </form>
         <footer class="headerfooter">
             
