@@ -4,9 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Customer List</title>
+    <title>DUMB: Customer List</title>
     <link href="App_Themes/MainStyles.css" rel="stylesheet" type="text/css"/>
-    <link href="App_Themes/CustomerList.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div id="content">
@@ -16,13 +15,14 @@
         </header>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Customer List</a></li>
-                <li><a href="">Customer Feedback</a></li>
+                <li><a href="Default.aspx">Home</a></li>
+                <li><a href="CustomerList.aspx">Customer List</a></li>
+                <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>
         </nav>
         <form id="formCustomerList" runat="server">
             <h2>Customer List</h2>
+            <br/>
             <br/>
             <asp:Label ID="lblSelectCustomer" runat="server" Text="Please select a customer:"></asp:Label>
             <asp:DropDownList ID="ddlCustomers" runat="server" AutoPostBack="True" DataSourceID="sqlCustomers" DataTextField="Name" DataValueField="CustomerID">
@@ -46,17 +46,24 @@
             <br />
             <asp:Label ID="lblEmail" runat="server"></asp:Label>
         
+            <br />
+            <br />
+            <br />
+            <asp:Button ID="btnViewContacts" runat="server" OnClick="btnViewContacts_Click" Text="View Contact List" />
+            &nbsp;&nbsp;
+            <asp:Button ID="btnAddContacts" runat="server" OnClick="btnAddContacts_Click" Text="Add To Contacts" />
+        
         </form>
         <footer class="headerfooter">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="Default.aspx">Home</a></li>
                 <li><span>|</span></li>
-                <li><a href="">Customer List</a></li>
+                <li><a href="CustomerList.aspx">Customer List</a></li>
                 <li><span>|</span></li>
-                <li><a href="">Customer Feedback</a></li>
+                <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>
             <br/>
-            <span id="copyright">Copyright &copy; 2009 &middot; All Rights Reserved</span>
+            <span id="copyright">Copyright &copy; 2015 &middot; All Rights Reserved</span>
         </footer>
     </div>
 </body>

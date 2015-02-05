@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class CustomerList : System.Web.UI.Page
+public partial class CustomerList : Page
 {
     private Customer _selectedCustomer;
 
@@ -56,5 +52,15 @@ public partial class CustomerList : System.Web.UI.Page
             EmailAddress = customerRow["Email"].ToString()
         };
         return customer;
+    }
+
+    protected void btnViewContacts_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/ContactList.aspx");
+    }
+
+    protected void btnAddContacts_Click(object sender, EventArgs e)
+    {
+        
     }
 }
