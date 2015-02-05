@@ -1,11 +1,74 @@
 ﻿/* Style rules for HTML elements. */
+body {
+    background-color: lightgrey;
+}
+
+nav {
+    display: table;
+    width: 100%;
+    border-bottom: 2px solid maroon;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav li {
+    float: left;
+    display: table-cell;
+    width: 33.333333334%;
+}
+
+nav a {
+    display: block;
+    font-weight: bold;
+    color: white;
+    background-color: maroon;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid tan;
+}
+
+nav a:hover {
+    background-color: tan;
+    color: maroon;
+    border: 2px solid maroon;
+}
+
+footer {
+    font-size: 80%;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    display: inline;
+    margin: 0 auto;
+}
+
+footer li {
+    display: inline;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
 
 /* Style rules for CSS ID selectors. */
 #content {
     width: 978px;
     margin: 0 auto;
     background-color: tan;
-    border: 1px solid maroon;
+    border: 2px solid maroon;
+    color: maroon;
 }
 
 #companyName {
@@ -17,11 +80,15 @@
     font-style: italic;
 }
 
+#copyright {
+    font-size: 75%;
+}
+
 /* Style rules for CSS Class selectors. */
 .headerfooter {
     background-color: maroon;
     overflow: auto;
-
+    padding: 5px;
     color: white;
     text-align: center;
 }

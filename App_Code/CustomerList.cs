@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using App_Code;
 
 /// <summary>
 /// This class is used to store information about the 
@@ -11,7 +10,7 @@ using App_Code;
 /// <version>Spring 2015</version>
 public class CustomerList
 {
-    private readonly List<Customer> customerList;
+    private readonly List<Customer> _customerList;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="CustomerList"/> class.
@@ -20,7 +19,7 @@ public class CustomerList
     /// <postcondition>A new customer list is instantiated.</postcondition>
 	public CustomerList()
 	{
-        this.customerList = new List<Customer>();
+        this._customerList = new List<Customer>();
 	}
 
     /// <summary>
@@ -37,11 +36,11 @@ public class CustomerList
     {
         get
         {
-            if (index < 0 || index >= this.customerList.Count)
+            if (index < 0 || index >= this._customerList.Count)
             {
                 throw new ArgumentOutOfRangeException("index", "index cannot be negative or greater than the list size");
             }
-            return this.customerList[index];
+            return this._customerList[index];
         }
         set
         {
@@ -49,7 +48,7 @@ public class CustomerList
             {
                 throw new ArgumentNullException("value", "cannot set a null customer");
             }
-            this.customerList[index] = value;
+            this._customerList[index] = value;
         }
     }
 
@@ -67,7 +66,7 @@ public class CustomerList
         get
         {
             Customer specifiedCustomer = null;
-            foreach (var currentCustomer in this.customerList)
+            foreach (var currentCustomer in this._customerList)
             {
                 if (currentCustomer.Name == name)
                 {
@@ -85,7 +84,7 @@ public class CustomerList
     /// <returns>The number of customers in the list.</returns>
     public int Count()
     {
-        return this.customerList.Count;
+        return this._customerList.Count;
     }
 
     /// <summary>
@@ -101,7 +100,7 @@ public class CustomerList
         {
             throw new ArgumentNullException("newCustomer", "cannot add a null customer to the list");
         }
-        this.customerList.Add(newCustomer);
+        this._customerList.Add(newCustomer);
     }
 
     /// <summary>
@@ -113,11 +112,11 @@ public class CustomerList
     /// <exception cref="System.ArgumentOutOfRangeException">index;index cannot be negative or greater than the list size</exception>
     public void RemoveAt(int index)
     {
-        if (index < 0 || index > this.customerList.Count)
+        if (index < 0 || index > this._customerList.Count)
         {
             throw new ArgumentOutOfRangeException("index", "index cannot be negative or greater than the list size");
         }
-        this.customerList.RemoveAt(index);
+        this._customerList.RemoveAt(index);
     }
 
     /// <summary>
@@ -127,7 +126,7 @@ public class CustomerList
     /// <postcondition>The list is empty.</postcondition>
     public void Clear()
     {
-        this.customerList.Clear();
+        this._customerList.Clear();
     }
 
     /// <summary>
