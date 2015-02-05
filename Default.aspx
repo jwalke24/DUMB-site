@@ -20,7 +20,11 @@
                 <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>
         </nav>
-        <form id="form1" runat="server">
+        <form id="formHome" runat="server">
+            <h2>Home</h2>
+            <br/>
+            <br/>
+            <p>Welcome to the site for the Digital Upscale Manager for Ballgames. Please click a link above to get started!</p>
         </form>
         <footer class="headerfooter">
             <ul>
