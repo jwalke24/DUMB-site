@@ -3,6 +3,11 @@ using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/// <summary>
+/// This class represents the code behind for the CustomerFeedback page.
+/// </summary>
+/// <author>Jonathan Walker</author>
+/// <version>Spring 2015</version>
 public partial class CustomerFeedback : Page
 {
     /// <summary>
