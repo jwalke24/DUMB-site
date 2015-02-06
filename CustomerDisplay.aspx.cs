@@ -87,9 +87,20 @@ public partial class CustomerDisplay : Page
     /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
     protected void btnAddContacts_Click(object sender, EventArgs e)
     {
-        if (Session["CustomerList"] != null)
+        if (Session["CustomerList"] == null)
         {
-            var customerList = (CustomerDisplay) Session["CustomerList"];
+            Session["CustomerList"] = new CustomerList();
+        }
+
+        var customerList = (CustomerList) Session["CustomerList"];
+
+        if (customerList[this.ddlCustomers.SelectedValue] == null)
+        {
+            customerList.AddItem(this._selectedCustomer);
+        }
+        else
+        {
+            this.lblMessage.Text = "The selected customer is already in the list.";
         }
     }
 }

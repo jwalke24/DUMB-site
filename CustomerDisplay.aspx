@@ -53,6 +53,10 @@
             &nbsp;&nbsp;
             <asp:Button ID="btnAddContacts" runat="server" OnClick="btnAddContacts_Click" Text="Add To Contacts" />
         
+            <br />
+            <br />
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+        
         </form>
         <footer class="headerfooter">
             <ul>

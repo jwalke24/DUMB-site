@@ -58,17 +58,17 @@ public class CustomerList
     /// <value>
     /// The <see cref="Customer"/>.
     /// </value>
-    /// <param name="name">The name.</param>
+    /// <param name="customerId">The customer id.</param>
     /// <precondition>None.</precondition>
     /// <returns>The first customer from the list with the specified name.</returns>
-    public Customer this[string name]
+    public Customer this[string customerId]
     {
         get
         {
             Customer specifiedCustomer = null;
             foreach (var currentCustomer in this._customerList)
             {
-                if (currentCustomer.Name == name)
+                if (currentCustomer.CustomerId == customerId)
                 {
                     specifiedCustomer = currentCustomer;
                 }
