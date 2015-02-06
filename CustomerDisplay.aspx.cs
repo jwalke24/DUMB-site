@@ -87,14 +87,9 @@ public partial class CustomerDisplay : Page
     /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
     protected void btnAddContacts_Click(object sender, EventArgs e)
     {
-        if (Session["CustomerList"] == null)
-        {
-            Session["CustomerList"] = new CustomerList();
-        }
+        var customerList = CustomerList.GetCustomers();
 
-        var customerList = (CustomerList) Session["CustomerList"];
-
-        if (customerList[this.ddlCustomers.SelectedValue] == null)
+        if (customerList[this._selectedCustomer.Name] == null)
         {
             customerList.AddItem(this._selectedCustomer);
         }

@@ -26,8 +26,15 @@
             <br />
             <asp:Label ID="lblContactList" runat="server" Text="Customer Contact List"></asp:Label>
             <br />
-            <asp:ListBox ID="lbContactList" runat="server">
+            <asp:ListBox ID="lbContactList" runat="server" Width="30em">
             </asp:ListBox>
+            <br />
+            <br />
+            <asp:Button ID="btnAdditionalCustomers" runat="server" OnClick="btnAdditionalCustomers_Click" Text="Select Additional Customers" />
+&nbsp;&nbsp;
+            <asp:Button ID="btnRemoveCustomer" runat="server" OnClick="btnRemoveCustomer_Click" Text="Remove Customer" />
+&nbsp;&nbsp;
+            <asp:Button ID="btnClearCustomers" runat="server" OnClick="btnClearCustomers_Click" Text="Clear List" />
             <br/>
         </form>
         <footer class="headerfooter">

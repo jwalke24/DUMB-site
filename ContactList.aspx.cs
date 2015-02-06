@@ -1,34 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class ContactList : System.Web.UI.Page
+public partial class ContactList : Page
 {
     private CustomerList _customers;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+        this._customers = CustomerList.GetCustomers();
+        
+        if (IsPostBack)
         {
-            this.bindCustomersToListBox();
+            return;
         }
 
-        if (Session["CustomerList"] == null)
+        this.PopulateContactListBox();
+
+    }
+
+    private void PopulateContactListBox()
+    {
+        for (var i = 0; i < this._customers.Count(); i++)
         {
-            this._customers = new CustomerList();
-            Session["CustomerList"] = this._customers;
-        }
-        else
-        {
-            this._customers = (CustomerList) Session["CustomerList"];
+            this.lbContactList.Items.Add(this._customers[i].Name + ": " + this._customers[i].PhoneNumber + "; " +
+                                               this._customers[i].EmailAddress);
         }
 
     }
 
-    private void bindCustomersToListBox()
+    protected void btnAdditionalCustomers_Click(object sender, EventArgs e)
     {
+        Response.Redirect("~/CustomerDisplay.aspx");
+    }
+
+    protected void btnRemoveCustomer_Click(object sender, EventArgs e)
+    {
+        var removeIndex = this.lbContactList.Items.IndexOf(this.lbContactList.SelectedItem);
+        this.lbContactList.Items.RemoveAt(removeIndex);
+        this._customers.RemoveAt(removeIndex);
+    }
+
+    protected void btnClearCustomers_Click(object sender, EventArgs e)
+    {
+        this._customers.Clear();
+        this.lbContactList.Items.Clear();
     }
 }
