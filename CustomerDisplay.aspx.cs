@@ -3,7 +3,7 @@ using System.Data;
 using System.Web.UI;
 
 /// <summary>
-/// This represents the code-behind for the CustomerDisplay.aspx page.
+///     This represents the code-behind for the CustomerDisplay.aspx page.
 /// </summary>
 /// <author>Jonathan Walker</author>
 /// <version>Spring 2015</version>
@@ -12,12 +12,12 @@ public partial class CustomerDisplay : Page
     private Customer _selectedCustomer;
 
     /// <summary>
-    /// Handles the Load event of the Page control.
+    ///     Handles the Load event of the Page control.
     /// </summary>
     /// <precondition>None.</precondition>
     /// <postcondition>Selected customer is set to the selected customer in the drop-down list.</postcondition>
     /// <param name="sender">The source of the event.</param>
-    /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+    /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -43,7 +43,7 @@ public partial class CustomerDisplay : Page
 
     private Customer GetSelectedCustomer()
     {
-        var customerTable = (DataView)this.sqlCustomers.Select(DataSourceSelectArguments.Empty);
+        var customerTable = (DataView) this.sqlCustomers.Select(DataSourceSelectArguments.Empty);
 
         if (customerTable == null)
         {
@@ -67,24 +67,24 @@ public partial class CustomerDisplay : Page
     }
 
     /// <summary>
-    /// Handles the Click event of the btnViewContacts control.
+    ///     Handles the Click event of the btnViewContacts control.
     /// </summary>
     /// <precondition>None.</precondition>
     /// <postcondition>Redirects the user to the Contact List page.</postcondition>
     /// <param name="sender">The source of the event.</param>
-    /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+    /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
     protected void btnViewContacts_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/ContactList.aspx");
     }
 
     /// <summary>
-    /// Handles the Click event of the btnAddContacts control.
+    ///     Handles the Click event of the btnAddContacts control.
     /// </summary>
     /// <precondition>None.</precondition>
     /// <postcondition>Adds the selected customer to the session's customer list.</postcondition>
     /// <param name="sender">The source of the event.</param>
-    /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+    /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
     protected void btnAddContacts_Click(object sender, EventArgs e)
     {
         var customerList = CustomerList.GetCustomers();

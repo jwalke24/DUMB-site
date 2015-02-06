@@ -1,7 +1,5 @@
 ﻿/* Style rules for HTML elements. */
-body {
-    background-color: lightgrey;
-}
+body { background-color: lightgrey; }
 
 form {
     padding: 20px;
@@ -9,16 +7,16 @@ form {
 }
 
 h2 {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 nav {
-    display: table;
-    width: 100%;
     border-bottom: 2px solid maroon;
-    padding: 0;
+    display: table;
     margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 nav ul {
@@ -29,27 +27,27 @@ nav ul {
 }
 
 nav li {
-    float: left;
     display: table-cell;
+    float: left;
     width: 33.333333334%;
 }
 
 nav a {
+    background-color: maroon;
+    border: 2px solid tan;
+    color: white;
     display: block;
     font-weight: bold;
-    color: white;
-    background-color: maroon;
-    text-align: center;
     padding: 5px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid tan;
 }
 
 nav a:hover {
     background-color: tan;
-    color: maroon;
     border: 2px solid maroon;
+    color: maroon;
 }
 
 footer {
@@ -58,14 +56,12 @@ footer {
 }
 
 footer ul {
-    list-style-type: none;
     display: inline;
+    list-style-type: none;
     margin: 0 auto;
 }
 
-footer li {
-    display: inline;
-}
+footer li { display: inline; }
 
 footer a {
     color: white;
@@ -73,32 +69,30 @@ footer a {
 }
 
 /* Style rules for CSS ID selectors. */
+
 #content {
-    width: 978px;
-    margin: 0 auto;
     background-color: tan;
     border: 2px solid maroon;
     color: maroon;
+    margin: 0 auto;
+    width: 978px;
 }
 
-#companyName {
-    margin-bottom: 0;
-}
+#companyName { margin-bottom: 0; }
 
 #companySlogan {
-    margin-top: 0;
     font-style: italic;
+    margin-top: 0;
 }
 
-#copyright {
-    font-size: 75%;
-}
+#copyright { font-size: 75%; }
 
 /* Style rules for CSS Class selectors. */
+
 .headerfooter {
     background-color: maroon;
+    color: white;
     overflow: auto;
     padding: 5px;
-    color: white;
     text-align: center;
 }

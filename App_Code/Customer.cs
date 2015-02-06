@@ -1,28 +1,18 @@
 ﻿using System;
 
 /// <summary>
-/// This class represents a customer in a database.
-/// A Customer contains information such as: id, name, and contact information.
-/// 
-/// <author>Jonathan Walker</author>
-/// <version>Spring 2015</version>
+///     This class represents a customer in a database.
+///     A Customer contains information such as: id, name, and contact information.
+///     <author>Jonathan Walker</author>
+///     <version>Spring 2015</version>
 /// </summary>
 public class Customer
 {
-    private string _customerId;
-    private string _name;
-    private string _address;
-    private string _city;
-    private string _state;
-    private string _zipCode;
-    private string _phoneNumber;
-    private string _emailAddress;
-
     /// <summary>
-    /// Gets or sets the customer id.
+    ///     Gets or sets the customer id.
     /// </summary>
     /// <value>
-    /// The customer id.
+    ///     The customer id.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer id.</returns>
@@ -41,10 +31,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's name.
+    ///     Gets or sets the customer's name.
     /// </summary>
     /// <value>
-    /// The customer's name.
+    ///     The customer's name.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's name.</returns>
@@ -63,10 +53,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's street address.
+    ///     Gets or sets the customer's street address.
     /// </summary>
     /// <value>
-    /// The customer's street address.
+    ///     The customer's street address.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's street address.</returns>
@@ -85,10 +75,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's city of residence.
+    ///     Gets or sets the customer's city of residence.
     /// </summary>
     /// <value>
-    /// The customer's city of residence.
+    ///     The customer's city of residence.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's city of residence.</returns>
@@ -107,10 +97,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's state of residence.
+    ///     Gets or sets the customer's state of residence.
     /// </summary>
     /// <value>
-    /// The customer's state of residence.
+    ///     The customer's state of residence.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's state of residence.</returns>
@@ -129,10 +119,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's zip code.
+    ///     Gets or sets the customer's zip code.
     /// </summary>
     /// <value>
-    /// The customer's zip code.
+    ///     The customer's zip code.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's zip code.</returns>
@@ -151,10 +141,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's phone number.
+    ///     Gets or sets the customer's phone number.
     /// </summary>
     /// <value>
-    /// The customer's phone number.
+    ///     The customer's phone number.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's phone number.</returns>
@@ -173,10 +163,10 @@ public class Customer
     }
 
     /// <summary>
-    /// Gets or sets the customer's email address.
+    ///     Gets or sets the customer's email address.
     /// </summary>
     /// <value>
-    /// The customer's email address.
+    ///     The customer's email address.
     /// </value>
     /// <precondition>value != null</precondition>
     /// <returns>The customer's email address.</returns>
@@ -193,4 +183,13 @@ public class Customer
             this._emailAddress = value;
         }
     }
+
+    private string _address;
+    private string _city;
+    private string _customerId;
+    private string _emailAddress;
+    private string _name;
+    private string _phoneNumber;
+    private string _state;
+    private string _zipCode;
 }

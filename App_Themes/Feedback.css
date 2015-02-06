@@ -1,45 +1,43 @@
 ﻿/* styles for the elements */
-label {
-    margin-right: 1em;
-}
-input {
-    margin-bottom: .5em;
-}
+label { margin-right: 1em; }
+
+input { margin-bottom: .5em; }
+
 select {
     margin-bottom: .5em;
     width: 3em;
 }
+
 textarea {
     height: 5em;
-    width: 25em;
     margin-bottom: .5em;
-}
-form {
-    text-align: justify;
-}
-h2 {
-    text-align: center;
+    width: 25em;
 }
 
+form { text-align: justify; }
+
+h2 { text-align: center; }
+
 /* styles for the class selectors */
+
 .label {
     float: left;
-    width: 12em;
     margin-left: 10em;
-}
-.entry {
     width: 12em;
 }
+
+.entry { width: 12em; }
+
 .submitButton {
     margin-left: 32.5em;
     padding: .25em .5em;
     width: 7em;
 }
+
 .button {
     margin-left: 1em;
     padding: .25em .5em;
     width: 7em;
 }
-.validator {
-    color: red;
-}
+
+.validator { color: red; }

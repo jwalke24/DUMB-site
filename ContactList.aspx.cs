@@ -8,14 +8,13 @@ public partial class ContactList : Page
     protected void Page_Load(object sender, EventArgs e)
     {
         this._customers = CustomerList.GetCustomers();
-        
+
         if (IsPostBack)
         {
             return;
         }
 
         this.PopulateContactListBox();
-
     }
 
     private void PopulateContactListBox()
@@ -23,9 +22,8 @@ public partial class ContactList : Page
         for (var i = 0; i < this._customers.Count(); i++)
         {
             this.lbContactList.Items.Add(this._customers[i].Name + ": " + this._customers[i].PhoneNumber + "; " +
-                                               this._customers[i].EmailAddress);
+                                         this._customers[i].EmailAddress);
         }
-
     }
 
     protected void btnAdditionalCustomers_Click(object sender, EventArgs e)
