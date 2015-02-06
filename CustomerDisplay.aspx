@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustomerList.aspx.cs" Inherits="CustomerList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustomerDisplay.aspx.cs" Inherits="CustomerDisplay" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>DUMB: Customer List</title>
+    <title>DUMB: Customer Display</title>
     <link href="App_Themes/MainStyles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -16,12 +16,12 @@
         <nav>
             <ul>
                 <li><a href="Default.aspx">Home</a></li>
-                <li><a href="CustomerList.aspx">Customer List</a></li>
+                <li><a href="CustomerDisplay.aspx">Customer Display</a></li>
                 <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>
         </nav>
         <form id="formCustomerList" runat="server">
-            <h2>Customer List</h2>
+            <h2>Customer Display</h2>
             <br/>
             <br/>
             <asp:Label ID="lblSelectCustomer" runat="server" Text="Please select a customer:"></asp:Label>
@@ -58,7 +58,7 @@
             <ul>
                 <li><a href="Default.aspx">Home</a></li>
                 <li><span>|</span></li>
-                <li><a href="CustomerList.aspx">Customer List</a></li>
+                <li><a href="CustomerDisplay.aspx">Customer Display</a></li>
                 <li><span>|</span></li>
                 <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>

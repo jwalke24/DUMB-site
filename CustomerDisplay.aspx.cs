@@ -3,11 +3,11 @@ using System.Data;
 using System.Web.UI;
 
 /// <summary>
-/// This represents the code-behind for the CustomerList.aspx page.
+/// This represents the code-behind for the CustomerDisplay.aspx page.
 /// </summary>
 /// <author>Jonathan Walker</author>
 /// <version>Spring 2015</version>
-public partial class CustomerList : Page
+public partial class CustomerDisplay : Page
 {
     private Customer _selectedCustomer;
 
@@ -89,7 +89,7 @@ public partial class CustomerList : Page
     {
         if (Session["CustomerList"] != null)
         {
-            var customerList = (CustomerList) Session["CustomerList"];
+            var customerList = (CustomerDisplay) Session["CustomerList"];
         }
     }
 }

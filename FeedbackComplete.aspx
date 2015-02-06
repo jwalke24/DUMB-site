@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><a href="Default.aspx">Home</a></li>
-                <li><a href="CustomerList.aspx">Customer List</a></li>
+                <li><a href="CustomerDisplay.aspx">Customer Display</a></li>
                 <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>
         </nav>
@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="Default.aspx">Home</a></li>
                 <li><span>|</span></li>
-                <li><a href="CustomerList.aspx">Customer List</a></li>
+                <li><a href="CustomerDisplay.aspx">Customer Display</a></li>
                 <li><span>|</span></li>
                 <li><a href="CustomerFeedback.aspx">Customer Feedback</a></li>
             </ul>
