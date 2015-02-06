@@ -27,16 +27,17 @@
             <br/>
             <br />
             <asp:Label ID="lblCustomerId" runat="server" Text="Customer ID:" CssClass="label"></asp:Label>
-            <asp:TextBox ID="tbCustomerId" runat="server" CssClass="entry"></asp:TextBox>
-            <asp:Button ID="btnCustomerId" runat="server" Text="Check" CssClass="button"/>
+            <asp:TextBox ID="txtCustomerId" runat="server" CssClass="entry"></asp:TextBox>
+            <asp:Button ID="btnCustomerId" runat="server" Text="Check" CssClass="button" OnClick="btnCustomerId_Click"/>
             <br />
             <br />
             <asp:Label ID="lblClosedFeedback" runat="server" Text="Closed Feedback Items:" CssClass="label"></asp:Label>
-            <asp:ListBox ID="lbClosedFeedback" runat="server"></asp:ListBox>
+            <asp:ListBox ID="lbClosedFeedback" runat="server" Width="25em"></asp:ListBox>
+            <asp:SqlDataSource ID="sqlFeedback" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManager %>" ProviderName="<%$ ConnectionStrings:DigitalManager.ProviderName %>" SelectCommand="SELECT * FROM [Feedback]"></asp:SqlDataSource>
             <br />
             <br />
             <asp:Label ID="lblServiceTime" runat="server" Text="Service Time:" CssClass="label"></asp:Label>
-            <asp:RadioButtonList ID="rblServiceTime" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+            <asp:RadioButtonList ID="rblServiceTime" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" Enabled="False">
                 <asp:ListItem Selected="True">Satisfied</asp:ListItem>
                 <asp:ListItem>Neither Satisfied Nor Dissatisfied</asp:ListItem>
                 <asp:ListItem>Dissatisfied</asp:ListItem>
@@ -44,7 +45,7 @@
             <br />
             <br />
             <asp:Label ID="lblEfficiency" runat="server" Text="Technical Efficiency:" CssClass="label"></asp:Label>
-            <asp:RadioButtonList ID="rblEfficiency" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+            <asp:RadioButtonList ID="rblEfficiency" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" Enabled="False">
                 <asp:ListItem Selected="True">Satisfied</asp:ListItem>
                 <asp:ListItem>Neither Satisfied Nor Dissatisfied</asp:ListItem>
                 <asp:ListItem>Dissatisfied</asp:ListItem>
@@ -52,7 +53,7 @@
             <br />
             <br />
             <asp:Label ID="lblResolution" runat="server" Text="Problem Resolution:" CssClass="label"></asp:Label>
-            <asp:RadioButtonList ID="rblResolution" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+            <asp:RadioButtonList ID="rblResolution" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" Enabled="False">
                 <asp:ListItem Selected="True">Satisfied</asp:ListItem>
                 <asp:ListItem>Neither Satisfied Nor Dissatisfied</asp:ListItem>
                 <asp:ListItem>Dissatisfied</asp:ListItem>
@@ -60,24 +61,24 @@
             <br />
             <br />
             <asp:Label ID="lblComments" runat="server" Text="Additional Comments:" CssClass="label"></asp:Label>
-            <asp:TextBox ID="tbComments" runat="server" TextMode="MultiLine" CssClass="entry"></asp:TextBox>
+            <asp:TextBox ID="txtComments" runat="server" TextMode="MultiLine" Enabled="False" Width="25em"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="lblContact" runat="server" Text="May We Contact You?" CssClass="label"></asp:Label>
-            <asp:CheckBoxList ID="cblContact" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+            <asp:CheckBoxList ID="cblContact" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" Enabled="False">
                 <asp:ListItem Value="true">Yes</asp:ListItem>
             </asp:CheckBoxList>
             <br />
             <br />
             <asp:Label ID="lblPreferredMethod" runat="server" Text="Preferred Contact Method:" CssClass="label"></asp:Label>
-            <asp:RadioButtonList ID="rblPreferredMethod" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
+            <asp:RadioButtonList ID="rblPreferredMethod" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" Enabled="False">
                 <asp:ListItem Selected="True">Email</asp:ListItem>
                 <asp:ListItem>Phone</asp:ListItem>
             </asp:RadioButtonList>
             <br />
             <br />
             <br />
-            <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="button, submitButton" />
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="button, submitButton" Enabled="False" />
         </form>
         <footer class="headerfooter">
             <ul>
