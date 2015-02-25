@@ -4,7 +4,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 /// <summary>
-/// This class represents the code behind for the CustomerFeedback page.
+///     This class represents the code behind for the CustomerFeedback page.
 /// </summary>
 /// <author>Jonathan Walker</author>
 /// <version>Spring 2015</version>
@@ -18,6 +18,7 @@ public partial class CustomerFeedback : Page
     protected void Page_Load(object sender, EventArgs e)
     {
         SetFocus(this.txtCustomerId);
+        this.DisableControls();
     }
 
     /// <summary>
@@ -29,6 +30,11 @@ public partial class CustomerFeedback : Page
     /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
     protected void btnCustomerId_Click(object sender, EventArgs e)
     {
+        if (!Page.IsValid)
+        {
+            return;
+        }
+
         this.lbClosedFeedback.DataSource = this.sqlFeedback;
         this.lbClosedFeedback.DataBind();
 
@@ -79,6 +85,7 @@ public partial class CustomerFeedback : Page
         this.cblContact.Enabled = false;
         this.rblPreferredMethod.Enabled = false;
         this.btnSubmit.Enabled = false;
+        this.rfvClosedFeedback.Enabled = false;
     }
 
     private void EnableControls()
@@ -90,6 +97,7 @@ public partial class CustomerFeedback : Page
         this.cblContact.Enabled = true;
         this.rblPreferredMethod.Enabled = true;
         this.btnSubmit.Enabled = true;
+        this.rfvClosedFeedback.Enabled = true;
     }
 
     /// <summary>

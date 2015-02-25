@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DUMB: Feedback Complete</title>
-    <link href="App_Themes/MainStyles.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/MainStyles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="content">

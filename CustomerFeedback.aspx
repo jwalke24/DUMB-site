@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DUMB: Customer Feedback</title>
-    <link href="App_Themes/MainStyles.css" rel="stylesheet" type="text/css"/>
-    <link href="App_Themes/Feedback.css" rel="stylesheet"/>
+    <link href="Styles/MainStyles.css" rel="stylesheet" type="text/css"/>
+    <link href="Styles/Feedback.css" rel="stylesheet"/>
 </head>
 <body>
 <div id="content">
@@ -34,7 +34,7 @@
         <br/>
         <asp:Label ID="lblCustomerId" runat="server" Text="Customer ID:" CssClass="label"></asp:Label>
         <asp:TextBox ID="txtCustomerId" runat="server" CssClass="entry"></asp:TextBox>
-        <asp:Button ID="btnCustomerId" runat="server" Text="Check" CssClass="button" CausesValidation="False" OnClick="btnCustomerId_Click"/>
+        <asp:Button ID="btnCustomerId" runat="server" Text="Check" CssClass="button" OnClick="btnCustomerId_Click"/>
         <asp:RequiredFieldValidator ID="rfvCustomerId" runat="server" ControlToValidate="txtCustomerId" CssClass="validator" Display="Dynamic" ErrorMessage="CustomerID is required."></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="cvCustomerId" runat="server" ControlToValidate="txtCustomerId" CssClass="validator" Display="Dynamic" ErrorMessage="CustomerID must be a number." Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
         <br/>

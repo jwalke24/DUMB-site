@@ -3,31 +3,18 @@ using System.Collections.Generic;
 using System.Web;
 
 /// <summary>
-/// This class is used to store information about the 
-/// customers in the contact list.
+///     This class is used to store information about the
+///     customers in the contact list.
 /// </summary>
 /// <author>Jonathan Walker</author>
 /// <version>Spring 2015</version>
-
 public class CustomerList
 {
-    private readonly List<Customer> _customerList;
-
     /// <summary>
-    /// Initializes a new instance of the <see cref="CustomerList"/> class.
-    /// </summary>
-    /// <precondition>None.</precondition>
-    /// <postcondition>A new customer list is instantiated.</postcondition>
-    public CustomerList()
-    {
-        this._customerList = new List<Customer>();
-    }
-
-    /// <summary>
-    /// Gets or sets the <see cref="Customer"/> at the specified index.
+    ///     Gets or sets the <see cref="Customer" /> at the specified index.
     /// </summary>
     /// <value>
-    /// The <see cref="Customer"/>.
+    ///     The <see cref="Customer" />.
     /// </value>
     /// <param name="index">The index.</param>
     /// <precondition> index > 0 && this.customerList.Count > index && value != null </precondition>
@@ -54,10 +41,10 @@ public class CustomerList
     }
 
     /// <summary>
-    /// Gets the <see cref="Customer"/> with the specified name.
+    ///     Gets the <see cref="Customer" /> with the specified name.
     /// </summary>
     /// <value>
-    /// The <see cref="Customer"/>.
+    ///     The <see cref="Customer" />.
     /// </value>
     /// <param name="name">The name.</param>
     /// <precondition>None.</precondition>
@@ -78,8 +65,20 @@ public class CustomerList
         }
     }
 
+    private readonly List<Customer> _customerList;
+
     /// <summary>
-    /// Returns the number of customers in the list.
+    ///     Initializes a new instance of the <see cref="CustomerList" /> class.
+    /// </summary>
+    /// <precondition>None.</precondition>
+    /// <postcondition>A new customer list is instantiated.</postcondition>
+    public CustomerList()
+    {
+        this._customerList = new List<Customer>();
+    }
+
+    /// <summary>
+    ///     Returns the number of customers in the list.
     /// </summary>
     /// <precondition>None.</precondition>
     /// <returns>The number of customers in the list.</returns>
@@ -89,7 +88,7 @@ public class CustomerList
     }
 
     /// <summary>
-    /// Adds the specified customer to the list.
+    ///     Adds the specified customer to the list.
     /// </summary>
     /// <param name="newCustomer">The new customer.</param>
     /// <precondition>newCustomer != null</precondition>
@@ -105,7 +104,7 @@ public class CustomerList
     }
 
     /// <summary>
-    /// Removes the customer at the specified index.
+    ///     Removes the customer at the specified index.
     /// </summary>
     /// <param name="index">The index.</param>
     /// <precondition>index > 0 && this.customerList.Count > index</precondition>
@@ -121,7 +120,7 @@ public class CustomerList
     }
 
     /// <summary>
-    /// Clears the list of all customers.
+    ///     Clears the list of all customers.
     /// </summary>
     /// <precondition>None.</precondition>
     /// <postcondition>The list is empty.</postcondition>
@@ -131,7 +130,7 @@ public class CustomerList
     }
 
     /// <summary>
-    /// Gets the customer list stored in the current session.
+    ///     Gets the customer list stored in the current session.
     /// </summary>
     /// <precondition>None.</precondition>
     /// <returns>The customer list stored in the current session.</returns>
@@ -142,6 +141,6 @@ public class CustomerList
             HttpContext.Current.Session["CustomerList"] = new CustomerList();
         }
 
-        return (CustomerList)HttpContext.Current.Session["CustomerList"];
+        return (CustomerList) HttpContext.Current.Session["CustomerList"];
     }
 }
