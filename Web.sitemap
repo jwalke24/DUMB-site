@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home"  description="The DUMB home page.">
+        <siteMapNode url="" title="Customer Support"  description="The DUMB customer support pages.">
+            <siteMapNode url="~/CustomerFeedback.aspx" title="Complete Customer Feedback"  description="The DUMB customer feedback page." />
+            <siteMapNode url="~/ContactUs.aspx" title="Contact Us"  description="The DUMB contact page." />
+        </siteMapNode>
+        <siteMapNode url="" title="Administration"  description="The DUMB administration pages.">
+            <siteMapNode url="~/CustomerDisplay.aspx" title="Display Customers"  description="The DUMB customer display page." />
+            <siteMapNode url="~/ContactList.aspx" title="Display Contacts"  description="The DUMB contact display page." />
+        </siteMapNode>
+        <siteMapNode url="~/SiteMap.aspx" title="Site Map" description="The DUMB site map page." />
+    </siteMapNode>
+</siteMap>

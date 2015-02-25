@@ -29,6 +29,11 @@
             </ul>
         </nav>
         <form id="formMaster" runat="server">
+            <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2">
+                <DynamicMenuItemStyle BackColor="Maroon" ForeColor="White" />
+                <DynamicMenuStyle BorderColor="Maroon" BorderStyle="Solid" BorderWidth="2px" />
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="smdsDUMBSite" runat="server" />
             <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
             <br/>
