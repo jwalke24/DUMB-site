@@ -92,6 +92,7 @@ public partial class CustomerDisplay : Page
         if (customerList[this._selectedCustomer.Name] == null)
         {
             customerList.AddItem(this._selectedCustomer);
+            Response.Redirect("~/ContactList.aspx");
         }
         else
         {
