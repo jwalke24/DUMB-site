@@ -34,6 +34,8 @@
                 <DynamicMenuStyle BorderColor="Maroon" BorderStyle="Solid" BorderWidth="2px" />
             </asp:Menu>
             <asp:SiteMapDataSource ID="smdsDUMBSite" runat="server" />
+            <br/>
+            <br/>
             <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
             <br/>

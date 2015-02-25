@@ -7,7 +7,6 @@
     <h2>Customer Feedback</h2>
     <br/>
     <br/>
-    <br/>
     <asp:Label ID="lblCustomerId" runat="server" Text="Customer ID:" CssClass="label"></asp:Label>
     <asp:TextBox ID="txtCustomerId" runat="server" CssClass="entry"></asp:TextBox>
     <asp:Button ID="btnCustomerId" runat="server" Text="Check" CssClass="button" OnClick="btnCustomerId_Click"/>
