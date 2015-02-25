@@ -2,5 +2,4 @@
 
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <asp:Label ID="lblMessage" runat="server"></asp:Label>
-    <br/>
 </asp:Content>

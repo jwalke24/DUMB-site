@@ -8,7 +8,6 @@
         <asp:TreeView ID="tvSiteMap" runat="server" DataSourceID="smdsSiteMap" ForeColor="Maroon">
         </asp:TreeView>
     </div>
-    <br/>
     <asp:SiteMapDataSource ID="smdsSiteMap" runat="server" />
 </asp:Content>
 
