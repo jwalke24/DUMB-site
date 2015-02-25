@@ -6,6 +6,7 @@
     <br/>
     <div class="centerBlock">
         <asp:TreeView ID="tvSiteMap" runat="server" DataSourceID="smdsSiteMap" ForeColor="Maroon">
+            <HoverNodeStyle ForeColor="White" />
         </asp:TreeView>
     </div>
     <asp:SiteMapDataSource ID="smdsSiteMap" runat="server" />

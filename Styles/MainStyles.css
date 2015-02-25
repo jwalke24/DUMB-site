@@ -2,8 +2,9 @@
 body { background-color: lightgrey; }
 
 form {
-    padding: 20px;
+    padding: 0 0 20px 0;
     text-align: center;
+    margin: 0;
 }
 
 h2 {
@@ -68,6 +69,10 @@ footer a {
     text-decoration: none;
 }
 
+footer a:hover {
+    color: tan;
+}
+
 /* Style rules for CSS ID selectors. */
 
 #content {
@@ -86,6 +91,17 @@ footer a {
 }
 
 #copyright { font-size: 75%; }
+
+#navigation {
+    background-color: maroon;
+    margin: 0 auto;
+}
+
+#menu {
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+}
 
 /* Style rules for CSS Class selectors. */
 

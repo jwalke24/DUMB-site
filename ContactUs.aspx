@@ -5,7 +5,7 @@
     <br/>
     <br/>
     <div>
-        Hours of Operation: Monday-Friday, 9 a.m. - 5 p.m.
+        Hours of Operation: Monday - Friday, 9 a.m. - 5 p.m.
         <br/>
         Email: <asp:HyperLink ID="hlEmail" runat="server" NavigateUrl="mailto: info@ballgame.com">info@ballgame.com</asp:HyperLink>
         <br/>

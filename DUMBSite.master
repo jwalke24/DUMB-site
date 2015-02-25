@@ -15,26 +15,18 @@
             <h1 id="companyName">Digital Upscale Manager for Ballgames</h1>
             <h3 id="companySlogan">"Managing Ballgames with Technology"</h3>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="Default.aspx">Home</a>
-                </li>
-                <li>
-                    <a href="CustomerDisplay.aspx">Customer Display</a>
-                </li>
-                <li>
-                    <a href="CustomerFeedback.aspx">Customer Feedback</a>
-                </li>
-            </ul>
-        </nav>
         <form id="formMaster" runat="server">
-            <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2">
-                <DynamicMenuItemStyle BackColor="Maroon" ForeColor="White" />
-                <DynamicMenuStyle BorderColor="Maroon" BorderStyle="Solid" BorderWidth="2px" />
-            </asp:Menu>
+            <div id="navigation">
+                <div id="menu">
+                    <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" ClientIDMode="Static" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2">
+                        <DynamicHoverStyle ForeColor="Tan" />
+                    <DynamicMenuItemStyle BackColor="Maroon" ForeColor="White" HorizontalPadding="5px" VerticalPadding="5px" />
+                    <DynamicMenuStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" />
+                        <StaticHoverStyle ForeColor="Tan" />
+                    </asp:Menu>
+                </div>
+            </div>
             <asp:SiteMapDataSource ID="smdsDUMBSite" runat="server" />
-            <br/>
             <br/>
             <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
@@ -51,14 +43,34 @@
                     <a href="Default.aspx">Home</a>
                 </li>
                 <li>
-                    <span>|</span></li>
+                    <span>|</span>
+                </li>
                 <li>
                     <a href="CustomerDisplay.aspx">Customer Display</a>
                 </li>
                 <li>
-                    <span>|</span></li>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="ContactList.aspx">Contact List</a>
+                </li>
+                <li>
+                    <span>|</span>
+                </li>
                 <li>
                     <a href="CustomerFeedback.aspx">Customer Feedback</a>
+                </li>
+                <li>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="ContactUs.aspx">Contact Us</a>
+                </li>
+                <li>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="SiteMap.aspx">Site Map</a>
                 </li>
             </ul>
             <br/>

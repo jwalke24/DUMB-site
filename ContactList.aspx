@@ -15,4 +15,5 @@
     <asp:Button ID="btnRemoveCustomer" runat="server" OnClick="btnRemoveCustomer_Click" Text="Remove Customer"/>
     &nbsp;&nbsp;
     <asp:Button ID="btnClearCustomers" runat="server" OnClick="btnClearCustomers_Click" Text="Clear List"/>
+    <br/>
 </asp:Content>
