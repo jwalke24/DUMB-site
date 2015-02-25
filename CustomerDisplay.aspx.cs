@@ -95,7 +95,7 @@ public partial class CustomerDisplay : Page
         }
         else
         {
-            this.lblMessage.Text = "The selected customer is already in the list.";
+            this.lblMessage.Text = "The selected customer is already on the list.";
         }
     }
 }

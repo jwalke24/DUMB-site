@@ -15,6 +15,11 @@ public partial class FeedbackComplete : Page
     /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["IsDescription"] == null)
+        {
+            return;
+        }
+
         if (!(bool) Session["IsDescription"])
         {
             this.lblMessage.Text = "Oops! Something went wrong and we couldn't find your information. Please try again!";

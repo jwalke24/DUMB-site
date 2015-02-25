@@ -9,8 +9,8 @@
     </asp:DropDownList>
 
     <asp:SqlDataSource ID="sqlCustomers" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManager %>"
-                        ProviderName="<%$ ConnectionStrings:DigitalManager.ProviderName %>"
-                        SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] FROM [Customer] ORDER BY [CustomerID]">
+                       ProviderName="<%$ ConnectionStrings:DigitalManager.ProviderName %>"
+                       SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] FROM [Customer] ORDER BY [CustomerID]">
     </asp:SqlDataSource>
     <br/>
     <br/>
@@ -37,4 +37,5 @@
     <br/>
     <br/>
     <asp:Label ID="lblMessage" runat="server"></asp:Label>
+    <br/>
 </asp:Content>

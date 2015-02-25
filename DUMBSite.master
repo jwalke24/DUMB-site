@@ -5,77 +5,77 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DUMB Site</title>
-    <link href="Styles/MainStyles.css" rel="stylesheet" />
+    <link href="Styles/MainStyles.css" rel="stylesheet"/>
     <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div id="content">
-        <header class="headerfooter">
-            <h1 id="companyName">Digital Upscale Manager for Ballgames</h1>
-            <h3 id="companySlogan">"Managing Ballgames with Technology"</h3>
-        </header>
-        <form id="formMaster" runat="server">
-            <div id="navigation">
-                <div id="menu">
-                    <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" ClientIDMode="Static" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2">
-                        <DynamicHoverStyle ForeColor="Tan" />
-                    <DynamicMenuItemStyle BackColor="Maroon" ForeColor="White" HorizontalPadding="5px" VerticalPadding="5px" />
-                    <DynamicMenuStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" />
-                        <StaticHoverStyle ForeColor="Tan" />
-                    </asp:Menu>
-                </div>
+<div id="content">
+    <header class="headerfooter">
+        <h1 id="companyName">Digital Upscale Manager for Ballgames</h1>
+        <h3 id="companySlogan">"Managing Ballgames with Technology"</h3>
+    </header>
+    <form id="formMaster" runat="server">
+        <div id="navigation">
+            <div id="menu">
+                <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" ClientIDMode="Static" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2">
+                    <DynamicHoverStyle ForeColor="Tan"/>
+                    <DynamicMenuItemStyle BackColor="Maroon" ForeColor="White" HorizontalPadding="5px" VerticalPadding="5px"/>
+                    <DynamicMenuStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="2px"/>
+                    <StaticHoverStyle ForeColor="Tan"/>
+                </asp:Menu>
             </div>
-            <asp:SiteMapDataSource ID="smdsDUMBSite" runat="server" />
-            <br/>
-            <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">
-            </asp:ContentPlaceHolder>
-            <br/>
-            <br/>
-            <span>
-                Please contact us at 88-BallGame or email
-                <asp:HyperLink ID="hlContactEmail" runat="server" NavigateUrl="mailto: info@ballgame.com">info@ballgame.com</asp:HyperLink>
-            </span>
-        </form>
-        <footer class="headerfooter">
-            <ul>
-                <li>
-                    <a href="Default.aspx">Home</a>
-                </li>
-                <li>
-                    <span>|</span>
-                </li>
-                <li>
-                    <a href="CustomerDisplay.aspx">Customer Display</a>
-                </li>
-                <li>
-                    <span>|</span>
-                </li>
-                <li>
-                    <a href="ContactList.aspx">Contact List</a>
-                </li>
-                <li>
-                    <span>|</span>
-                </li>
-                <li>
-                    <a href="CustomerFeedback.aspx">Customer Feedback</a>
-                </li>
-                <li>
-                    <span>|</span>
-                </li>
-                <li>
-                    <a href="ContactUs.aspx">Contact Us</a>
-                </li>
-                <li>
-                    <span>|</span>
-                </li>
-                <li>
-                    <a href="SiteMap.aspx">Site Map</a>
-                </li>
-            </ul>
-            <br/>
-            <span id="copyright">Copyright &copy; 2015 &middot; All Rights Reserved</span>
-        </footer>
-    </div>
+        </div>
+        <asp:SiteMapDataSource ID="smdsDUMBSite" runat="server"/>
+        <br/>
+        <asp:ContentPlaceHolder id="formPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <br/>
+        <br/>
+        <div id="contactLine">
+            Please contact us at 88-BallGame or email
+            <asp:HyperLink ID="hlContactEmail" runat="server" NavigateUrl="mailto: info@ballgame.com">info@ballgame.com</asp:HyperLink>
+        </div>
+    </form>
+    <footer class="headerfooter">
+        <ul>
+            <li>
+                <a href="Default.aspx">Home</a>
+            </li>
+            <li>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="CustomerDisplay.aspx">Customer Display</a>
+            </li>
+            <li>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="ContactList.aspx">Contact List</a>
+            </li>
+            <li>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="CustomerFeedback.aspx">Customer Feedback</a>
+            </li>
+            <li>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="ContactUs.aspx">Contact Us</a>
+            </li>
+            <li>
+                <span>|</span>
+            </li>
+            <li>
+                <a href="SiteMap.aspx">Site Map</a>
+            </li>
+        </ul>
+        <br/>
+        <span id="copyright">Copyright &copy; 2015 &middot; All Rights Reserved</span>
+    </footer>
+</div>
 </body>
 </html>

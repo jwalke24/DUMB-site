@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="DUMB: Customer Feedback" Language="C#" MasterPageFile="~/DUMBSite.master" AutoEventWireup="true" CodeFile="CustomerFeedback.aspx.cs" Inherits="CustomerFeedback" %>
 
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
-    <link href="Styles/Feedback.css" rel="stylesheet" />
+    <link href="Styles/Feedback.css" rel="stylesheet"/>
 </asp:Content>
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <h2>Customer Feedback</h2>

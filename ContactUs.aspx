@@ -18,6 +18,5 @@
         <br/>
         Carrollton, GA 30118
     </div>
-   
-</asp:Content>
 
+</asp:Content>
