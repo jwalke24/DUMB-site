@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DUMB Site</title>
-    <link href="Styles/MainStyles.css" rel="stylesheet"/>
+    <link href="Styles/Main.css" rel="stylesheet" />
     <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
