@@ -17,14 +17,12 @@
     </header>
     <form id="formMaster" runat="server">
         <div id="navigation">
-            <div id="menu">
-                <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" ClientIDMode="Static" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2">
+                <asp:Menu ID="mnuDUMBSite" runat="server" DataSourceID="smdsDUMBSite" ClientIDMode="Static" StaticSubMenuIndent="16px" BackColor="Maroon" ForeColor="White" Orientation="Horizontal" StaticDisplayLevels="2" CssClass="menu">
                     <DynamicHoverStyle ForeColor="Tan"/>
                     <DynamicMenuItemStyle BackColor="Maroon" ForeColor="White" HorizontalPadding="5px" VerticalPadding="5px"/>
                     <DynamicMenuStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="2px"/>
                     <StaticHoverStyle ForeColor="Tan"/>
                 </asp:Menu>
-            </div>
         </div>
         <asp:SiteMapDataSource ID="smdsDUMBSite" runat="server"/>
         <br/>
