@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DUMBSite.master" AutoEventWireup="true" CodeFile="IncidentDisplay.aspx.cs" Inherits="IncidentDisplay" %>
+﻿<%@ Page Title="DUMB: Incident Display" Language="C#" MasterPageFile="~/DUMBSite.master" AutoEventWireup="true" CodeFile="IncidentDisplay.aspx.cs" Inherits="IncidentDisplay" %>
 
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="server" >
     <link href="Styles/IncidentDisplay.css" rel="stylesheet" />

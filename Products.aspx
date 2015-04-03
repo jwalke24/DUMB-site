@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DUMBSite.master" AutoEventWireup="true" CodeFile="Products.aspx.cs" Inherits="Products" %>
+﻿<%@ Page Title="DUMB: Products" Language="C#" MasterPageFile="~/DUMBSite.master" AutoEventWireup="true" CodeFile="Products.aspx.cs" Inherits="Products" %>
 
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" Runat="Server">
     <link href="Styles/Products.css" rel="stylesheet" />
