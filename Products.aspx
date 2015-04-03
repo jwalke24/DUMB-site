@@ -8,7 +8,7 @@
     <br/>
     <br/>
 
-<asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="SoftwareID" DataSourceID="sdsProducts" HorizontalAlign="Center" GridLines="None" CssClass="Grid">
+<asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="SoftwareID" DataSourceID="sdsProducts" HorizontalAlign="Center" GridLines="None" CssClass="Grid" OnRowDeleted="gvProducts_RowDeleted" OnRowUpdated="gvProducts_RowUpdated">
     <Columns>
         <asp:TemplateField HeaderText="Software ID" SortExpression="SoftwareID">
             <EditItemTemplate>
@@ -69,7 +69,30 @@
         <asp:Parameter Name="SoftwareID" Type="String" />
     </UpdateParameters>
 </asp:SqlDataSource>
-<br />
     <asp:ValidationSummary ID="vsProducts" runat="server" DisplayMode="List" HeaderText="Please correct the following issues:" ValidationGroup="vgProducts" />
+    <br/>
+    <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+    <br/>
+    <h3>Add A Product</h3>
+    <br/>
+    <asp:Label ID="lblAddSoftwareID" runat="server" Text="Software ID: " Width="100px"></asp:Label><asp:TextBox ID="txtAddSoftwareID" runat="server" ValidationGroup="vgAddProduct" Width="150px"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvAddSoftwareID" runat="server" ControlToValidate="txtAddSoftwareID" Display="Dynamic" ErrorMessage="Software ID is required." ValidationGroup="vgAddProduct">*</asp:RequiredFieldValidator>
+    <br/>
+    <asp:Label ID="lblAddName" runat="server" Text="Name: " Width="100px"></asp:Label><asp:TextBox ID="txtAddName" runat="server" ValidationGroup="vgAddProduct" Width="150px"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvAddName" runat="server" ControlToValidate="txtAddName" Display="Dynamic" ErrorMessage="Name is required." ValidationGroup="vgAddProduct">*</asp:RequiredFieldValidator>
+    <br/>
+    <asp:Label ID="lblAddVersion" runat="server" Text="Version: " Width="100px"></asp:Label><asp:TextBox ID="txtAddVersion" runat="server" ValidationGroup="vgAddProduct" Width="150px"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvAddVersion" runat="server" ControlToValidate="txtAddVersion" Display="Dynamic" ErrorMessage="Version is required." ValidationGroup="vgAddProduct">*</asp:RequiredFieldValidator>
+    <asp:CompareValidator ID="cvAddVersion" runat="server" ControlToValidate="txtAddVersion" Display="Dynamic" ErrorMessage="Version must be greater than or equal to 1.0." Operator="GreaterThanEqual" Type="Double" ValidationGroup="vgAddProduct" ValueToCompare="1.0">*</asp:CompareValidator>
+    <br/>
+    <asp:Label ID="lblAddReleaseDate" runat="server" Text="Release Date: " Width="100px"></asp:Label><asp:TextBox ID="txtAddReleaseDate" runat="server" ValidationGroup="vgAddProduct" Width="150px"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvAddReleaseDate" runat="server" ControlToValidate="txtAddReleaseDate" Display="Dynamic" ErrorMessage="Release date is required." ValidationGroup="vgAddProduct">*</asp:RequiredFieldValidator>
+    <asp:CustomValidator ID="cvAddReleaseDate" runat="server" ControlToValidate="txtAddReleaseDate" Display="Dynamic" ErrorMessage="Release Date must match MM/dd/yyyy HH:mm:ss AM/PM format." OnServerValidate="cvReleaseDate_ServerValidate" ValidationGroup="vgAddProduct">*</asp:CustomValidator>
+    <br/>
+    <br/>
+    <asp:Button ID="btnAddProduct" runat="server" Text="Add Product" ValidationGroup="vgAddProduct" OnClick="btnAddProduct_Click" />
+    <br/>
+    <br/>
+    <asp:ValidationSummary ID="vsAddProduct" runat="server" DisplayMode="List" HeaderText="Please correct the following issues:" ValidationGroup="vgAddProduct" />
 </asp:Content>
 
