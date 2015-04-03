@@ -2,6 +2,11 @@
 using System.Globalization;
 using System.Web.UI.WebControls;
 
+/// <summary>
+/// This class represents the code-behind file for the Products.aspx page.
+/// </summary>
+/// <author>Jonathan Walker</author>
+/// <version>Spring 2015</version>
 public partial class Products : System.Web.UI.Page
 {
     /// <summary>

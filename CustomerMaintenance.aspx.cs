@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb;
-using System.Data.SqlClient;
 
 /// <summary>
 /// This class represents the code-behind for the CustomerMaintenance.aspx page.
