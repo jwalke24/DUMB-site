@@ -57,7 +57,7 @@ footer {
 }
 
 footer ul {
-    display: inline;
+    display: inline-block;
     list-style-type: none;
     margin: 0 auto;
 }

@@ -35,7 +35,13 @@ public partial class ContactList : Page
         {
             var customerNameArray = this._customers[i].Name.Split(' ');
             var firstName = customerNameArray[0];
-            var lastName = customerNameArray[1];
+            var lastName = "";
+
+            if (customerNameArray.Length > 1)
+            {
+                lastName = customerNameArray[1];
+            }
+            
             this.lbContactList.Items.Add(lastName + ", " + firstName + ": " + this._customers[i].PhoneNumber + "; " +
                                          this._customers[i].EmailAddress);
         }
