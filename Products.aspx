@@ -5,9 +5,10 @@
 </asp:Content>
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" Runat="Server">
     <h2>Products</h2>
-    <br/>
-    <br/>
-
+    <br />
+    <br />
+    <h3>Product Details</h3>
+    <br />
 <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="SoftwareID" DataSourceID="sdsProducts" HorizontalAlign="Center" GridLines="None" CssClass="Grid" OnRowDeleted="gvProducts_RowDeleted" OnRowUpdated="gvProducts_RowUpdated">
     <Columns>
         <asp:TemplateField HeaderText="Software ID" SortExpression="SoftwareID">
@@ -47,7 +48,7 @@
                 <asp:Label ID="Label4" runat="server" Text='<%# Bind("ReleaseDate") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ValidationGroup="vgProducts" />
+        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ValidationGroup="vgProducts" ButtonType="Button" />
     </Columns>
     <HeaderStyle Font-Bold="True" />
 </asp:GridView>
@@ -71,7 +72,9 @@
 </asp:SqlDataSource>
     <asp:ValidationSummary ID="vsProducts" runat="server" DisplayMode="List" HeaderText="Please correct the following issues:" ValidationGroup="vgProducts" />
     <br/>
+    <br/>
     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+    <br/>
     <br/>
     <h3>Add A Product</h3>
     <br/>

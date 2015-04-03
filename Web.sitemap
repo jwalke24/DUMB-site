@@ -12,7 +12,7 @@
       <siteMapNode url="~/ContactList.aspx" title="Display Contacts" description="The DUMB contact display page." />
     </siteMapNode>
     <siteMapNode url="" title="Maintenance" description="The DUMB maintenance pages.">
-      <siteMapNode url="" title="Maintain Customers" description="The DUMB customer maintenance page." />
+      <siteMapNode url="~/CustomerMaintenance.aspx" title="Maintain Customers" description="The DUMB customer maintenance page." />
       <siteMapNode url="~/Products.aspx" title="Maintain Products" description="The DUMB product maintenance page." />
       <siteMapNode url="~/IncidentDisplay.aspx" title="Maintain Incidents" description="The DUMB incident maintenance page." />
     </siteMapNode>
