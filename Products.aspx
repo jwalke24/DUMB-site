@@ -10,7 +10,7 @@
 
 <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" CellPadding="5" DataKeyNames="SoftwareID" DataSourceID="sdsProducts" HorizontalAlign="Center" GridLines="None" CssClass="Grid">
     <Columns>
-        <asp:TemplateField HeaderText="SoftwareID" SortExpression="SoftwareID">
+        <asp:TemplateField HeaderText="Software ID" SortExpression="SoftwareID">
             <EditItemTemplate>
                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("SoftwareID") %>'></asp:Label>
             </EditItemTemplate>
@@ -20,7 +20,8 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Name" SortExpression="Name">
             <EditItemTemplate>
-                <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>' ValidationGroup="vgProducts"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" Display="Dynamic" ErrorMessage="Name is required." ValidationGroup="vgProducts">*</asp:RequiredFieldValidator>
             </EditItemTemplate>
             <ItemTemplate>
                 <asp:Label ID="Label2" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
@@ -28,21 +29,25 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Version" SortExpression="Version">
             <EditItemTemplate>
-                <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("Version") %>'></asp:TextBox>
+                <asp:TextBox ID="txtVersion" runat="server" Text='<%# Bind("Version") %>' ValidationGroup="vgProducts"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvVersion" runat="server" ControlToValidate="txtVersion" Display="Dynamic" ErrorMessage="Version is required." ValidationGroup="vgProducts">*</asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="cvVersion" runat="server" ControlToValidate="txtVersion" Display="Dynamic" ErrorMessage="Version must be greater than or equal to 1.0." Operator="GreaterThanEqual" Type="Double" ValidationGroup="vgProducts" ValueToCompare="1.0">*</asp:CompareValidator>
             </EditItemTemplate>
             <ItemTemplate>
                 <asp:Label ID="Label3" runat="server" Text='<%# Bind("Version") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:TemplateField HeaderText="ReleaseDate" SortExpression="ReleaseDate">
+        <asp:TemplateField HeaderText="Release Date" SortExpression="ReleaseDate">
             <EditItemTemplate>
-                <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("ReleaseDate") %>'></asp:TextBox>
+                <asp:TextBox ID="txtReleaseDate" runat="server" Text='<%# Bind("ReleaseDate") %>' ValidationGroup="vgProducts"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvReleaseDate" runat="server" ControlToValidate="txtReleaseDate" Display="Dynamic" ErrorMessage="Release date is required." ValidationGroup="vgProducts">*</asp:RequiredFieldValidator>
+                <asp:CustomValidator ID="cvReleaseDate" runat="server" ControlToValidate="txtReleaseDate" Display="Dynamic" ErrorMessage="Release date must match MM/dd/yyyy hh:mm:ss AM/PM format." OnServerValidate="cvReleaseDate_ServerValidate" ValidationGroup="vgProducts">*</asp:CustomValidator>
             </EditItemTemplate>
             <ItemTemplate>
                 <asp:Label ID="Label4" runat="server" Text='<%# Bind("ReleaseDate") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
-        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ValidationGroup="vgProducts" />
     </Columns>
     <HeaderStyle Font-Bold="True" />
 </asp:GridView>
@@ -64,6 +69,7 @@
         <asp:Parameter Name="SoftwareID" Type="String" />
     </UpdateParameters>
 </asp:SqlDataSource>
-
+<br />
+    <asp:ValidationSummary ID="vsProducts" runat="server" DisplayMode="List" HeaderText="Please correct the following issues:" ValidationGroup="vgProducts" />
 </asp:Content>
 
